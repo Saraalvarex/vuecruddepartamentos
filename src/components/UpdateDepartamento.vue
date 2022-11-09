@@ -2,7 +2,7 @@
     <h1>Update</h1>
  <div style="width: 500px; margin: 0 auto" v-if="departamento">
     <form method="post" v-on:submit.prevent="modificarDepart()">
-        <label style="color: red">Modificando departamento número: {{departamento.numero}}</label>
+        <label style="color: red">Estás modificando departamento número: {{departamento.numero}}</label>
         <input class="form-control" type="hidden"
         v-model="departamento.numero"
         /><br/>
