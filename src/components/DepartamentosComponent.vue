@@ -78,7 +78,18 @@ mounted(){
         this.departamentos=result;
         this.status=true;
     })
- }
+ },
+watch: {
+    //EL CONTROL DE LA VARIABLE SE REALIZA 
+    //MEDIANTE STRING Y NO SE UTILIZA LA PALABRA this
+    '$route.params.numero'(nextVal, oldVal){
+    //SI HA CAMBIADO, REALIZAMOS ACCIONES
+    if (nextVal != oldVal){
+        //ACCIONES
+        this.mostrarDoble();
+        }
+    }
+    },
 };
 </script>
 
